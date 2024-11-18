@@ -1,0 +1,14 @@
+﻿@model shop_app.Models.Order
+<h2>Delete Order</h2>
+
+<p>Are you sure you want to delete this order?</p>
+
+<p><strong>Product:</strong> @Model.Product.Name</p>
+<p><strong>Order Date:</strong> @Model.OrderDate</p>
+<p><strong>Quantity:</strong> @Model.Quantity</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index", "Order")" class="btn btn-secondary">Cancel</a>
+</form>

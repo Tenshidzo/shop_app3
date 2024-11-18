@@ -1,0 +1,11 @@
+﻿@model shop_app.Models.Order
+
+<h2>Order Details</h2>
+
+<p><strong>Product:</strong> @Model.Product.Name</p>
+<p><strong>Order Date:</strong> @Model.OrderDate</p>
+<p><strong>Quantity:</strong> @Model.Quantity</p>
+<p><strong>User ID:</strong> @Model.IdentityUserId</p>
+
+<a href="@Url.Action("Index", "Order")">Back to Orders</a>
+
